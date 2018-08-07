@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addBlinkyDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -29,5 +29,48 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+  });
+
+  $('.addPlanetButton').on('click', function(event) {
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    var dancer = new Planet(
+      $('body').height() * 0.9 * Math.random(),
+      $('body').width() * 0.9 * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(dancer.$node);
+  });
+
+  $('.addCometButton').on('click', function(event) {
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    var dancer = new Comet(
+      ($('body').height() / 2) * 0.9 * Math.random(),
+      ($('body').width() / 2) * 0.9 * Math.random(),
+      5
+    );
+    $('body').append(dancer.$node);
+  });
+
+  $('.addBlackHoleButton').on('click', function(event) {
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    var dancer = new BlackHole(
+      $('body').height() * 0.5,
+      $('body').width() * 0.5,
+      30
+    );
+    $('body').append(dancer.$node);
+    setTimeout(() => {
+      dancer.$node.fadeOut();
+      $('img').remove();
+    }, 2200);
   });
 });

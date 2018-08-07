@@ -10,7 +10,7 @@ let BlinkyDancer = function(top, left, timeBetweenSteps) {
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 BlinkyDancer.prototype.step = function() {
-  Dancer.prototype.step.call(this); //might be wrong
+  Dancer.prototype.step.call(this);
   this.$node.fadeOut();
   this.$node.addClass('animated flip');
   this.$node.fadeIn();
