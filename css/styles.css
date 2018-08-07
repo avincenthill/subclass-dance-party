@@ -8,6 +8,7 @@ body {
   font-size: 3vh;
   text-align: center;
   font-family: "sciflysans";
+  text-shadow: 0 0 20px rgb(213, 213, 255);
 }
 body,
 a:link,
@@ -43,6 +44,7 @@ a:active {
   transform: scale(1.7);
   z-index: 999;
   transition: 0.5s cubic-bezier(0.22, 1.55, 0.06, 0.93);
+  text-shadow: 0 0 20px rgb(33, 33, 255);
 }
 
 .dancer {
@@ -58,7 +60,7 @@ a:active {
 }
 .subtitle {
   font-size: 2.5vmin;
-  color: darkgrey;
+  color: white;
 }
 @font-face {
   font-family: "sciflysans";

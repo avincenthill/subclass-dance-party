@@ -16,12 +16,7 @@ BlackHole.prototype.step = function() {
   let width = $(this.$node).width();
   $(this.$node).height(height * 1.065);
   $(this.$node).width(width * 1.065);
-
   let top = this.$node.position().top;
   let left = this.$node.position().left;
   this.setPosition(top - 27, left - 27);
-  if (width > 10000) {
-    // this.$node = null;
-    this.kill();
-  }
 };

@@ -15,12 +15,3 @@ BlinkyDancer.prototype.step = function() {
   this.$node.addClass('animated flip');
   this.$node.fadeIn();
 };
-
-//TBD decouple pic from superclass
-//make planet subclass
-//make comet subclass
-//make moon
-//make supernova
-//make black hole
-//make lineup function
-//make go crazy

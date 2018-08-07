@@ -18,10 +18,10 @@ Planet.prototype.constructor = Planet;
 Planet.prototype.step = function() {
   Dancer.prototype.step.call(this);
 
-  if (this.$node.hasClass('animated tada')) {
-    this.$node.removeClass('animated tada');
+  if (this.$node.hasClass('animated jello')) {
+    this.$node.removeClass('animated jello');
   } else {
-    this.$node.addClass('animated tada');
+    this.$node.addClass('animated jello');
   }
 
   // this.$node.fadeIn();
