@@ -35,12 +35,20 @@ a:active {
   text-align: center;
   font-size: 2vh;
   color: white;
+  transition: 0.25s ease-out;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  transform: scale(1.7);
+  z-index: 999;
+  transition: 0.5s cubic-bezier(0.22, 1.55, 0.06, 0.93);
 }
 
 .dancer {
-  border: 10px solid blue;
-  border-radius: 10px;
   position: absolute;
+  z-index: 999;
+  background: transparent;
 }
 
 .title {

@@ -31,3 +31,9 @@ describe('blinkyDancer', function() {
     });
   });
 });
+
+//TBD
+//lineup all nodes
+//2 new kinds of dances, 2 more tests each for them
+//dancers interacting
+//mouse over events
