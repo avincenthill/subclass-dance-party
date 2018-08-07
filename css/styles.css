@@ -58,6 +58,11 @@ a:active {
   padding: 2vmin;
   padding-left: 4vmin;
 }
+
+.grow {
+  transform: scale(2);
+}
+
 .subtitle {
   font-size: 2.5vmin;
   color: white;

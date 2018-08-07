@@ -17,6 +17,14 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    $(dancer.$node).hover(
+      () => {
+        $(dancer.$node).addClass('animated wobble');
+      },
+      () => {
+        $(dancer.$node).removeClass('animated wobble');
+      }
+    );
   });
 
   $('.addCometButton').on('click', function(event) {
@@ -52,7 +60,7 @@ $(document).ready(function() {
       [...items].forEach((element, index) =>
         $(element).animate({
           top: String(height / 2),
-          left: String((width / items.length) * (index + 1))
+          left: String((width / items.length) * (index + 0.5) - 15)
         })
       );
     }
