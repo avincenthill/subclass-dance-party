@@ -34,6 +34,7 @@ $(document).ready(function() {
       5
     );
     $('body').append(dancer.$node);
+    $(dancer.$node).addClass('comet');
   });
 
   $('.addBlackHoleButton').on('click', function(event) {

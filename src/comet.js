@@ -6,9 +6,6 @@ let Comet = function(top, left, timeBetweenSteps) {
   );
 
   this.setPosition(top, left);
-  setTimeout(() => {
-    this.kill();
-  }, 150);
 };
 
 Comet.prototype = Object.create(Dancer.prototype);
@@ -19,4 +16,8 @@ Comet.prototype.step = function() {
   let left = this.$node.position().left;
   this.setPosition(top + 20, left + 25);
   this.$node.fadeIn();
+
+  if (top > 800) {
+    $('.comet').remove();
+  }
 };
